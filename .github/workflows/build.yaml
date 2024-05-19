@@ -12,7 +12,7 @@ jobs:
         uses: Cyberboss/install-winget@v1
 
       - name: Install calculator
-        run: winget install --name "Windows Calculator"
+        run: winget install --name "Windows Calculator" --accept-source-agreements --accept-package-agreements
 
       - name: Check out code
         uses: actions/checkout@v4
