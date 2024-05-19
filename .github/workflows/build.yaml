@@ -1,0 +1,15 @@
+name: Build
+run-name: Build and run tests
+on: [push]
+jobs:
+  Build:
+    runs-on: windows-latest
+    steps:
+      - name: Install .net sdk
+        run: choco install dotnet-8.0-sdk
+
+      - name: Check out code
+        uses: actions/checkout@v4
+
+      - name: Build and test
+        run: dotnet test
