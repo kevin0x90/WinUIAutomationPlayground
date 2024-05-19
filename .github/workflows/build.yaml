@@ -8,6 +8,12 @@ jobs:
       - name: Install .net sdk
         run: choco install dotnet-8.0-sdk
 
+      - name: Install winget
+        uses: Cyberboss/install-winget@v1
+
+      - name: Install calculator
+        run: winget install --name "Windows Calculator"
+
       - name: Check out code
         uses: actions/checkout@v4
 
